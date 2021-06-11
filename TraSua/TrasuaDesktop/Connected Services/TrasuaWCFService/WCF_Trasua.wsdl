@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WCF_Trasua" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57428/WCF_Trasua.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57428/WCF_Trasua.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWCF_Trasua_AddAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAccount" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_AddAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_EditPasswordAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPasswordAccount" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_EditPasswordAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPasswordAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_EditPermissionAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPermissionAccount" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_EditPermissionAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPermissionAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_DeleteAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAccount" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_DeleteAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_EditStatusAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditStatusAccount" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_EditStatusAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditStatusAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getAccountID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountID" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getAccountID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:addBill" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:editBill" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addBillDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:addBillDetail" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addBillDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addBillDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editBillDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:editBillDetail" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editBillDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editBillDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:addCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:editCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_acceptCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:acceptCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_acceptCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:acceptCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addAccountToCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:addAccountToCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addAccountToCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addAccountToCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getAllCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getAllCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getCustomerByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerByID" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getCustomerByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getAllDrink_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDrink" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getAllDrink_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDrinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getDrinkByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDrinkByType" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getDrinkByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDrinkByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_searchDrink_InputMessage">
+    <wsdl:part name="parameters" element="tns:searchDrink" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_searchDrink_OutputMessage">
+    <wsdl:part name="parameters" element="tns:searchDrinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getAllType_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllType" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getAllType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getTypeByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTypeByID" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getTypeByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTypeByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getDrinkByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDrinkByID" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getDrinkByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDrinkByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addNewDrink_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewDrink" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addNewDrink_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewDrinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addNewTypeDrink_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewTypeDrink" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addNewTypeDrink_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewTypeDrinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editDrink_InputMessage">
+    <wsdl:part name="parameters" element="tns:editDrink" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editDrink_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editDrinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_changeStatusDrink_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeStatusDrink" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_changeStatusDrink_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeStatusDrinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editTypeDrink_InputMessage">
+    <wsdl:part name="parameters" element="tns:editTypeDrink" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editTypeDrink_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editTypeDrinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_deleteDrink_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteDrink" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_deleteDrink_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteDrinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_deleteTypeDrink_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteTypeDrink" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_deleteTypeDrink_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteTypeDrinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getAllTopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllTopping" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getAllTopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllToppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_searchTopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:searchTopping" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_searchTopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:searchToppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getToppingByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getToppingByID" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getToppingByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getToppingByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addNewTopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewTopping" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addNewTopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewToppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editTopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:editTopping" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editTopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editToppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_changeStatusTopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeStatusTopping" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_changeStatusTopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeStatusToppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_deleteTopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteTopping" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_deleteTopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteToppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:addEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:editEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addAccountToEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:addAccountToEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addAccountToEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addAccountToEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_deleteEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_deleteEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua__Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:_Login" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua__Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:_LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:addOrder" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_acceptOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:acceptOrder" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_acceptOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:acceptOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_CancelOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelOrder" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_CancelOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addOrderDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:addOrderDetail" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_addOrderDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addOrderDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editOrderDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:editOrderDetail" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_editOrderDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editOrderDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getAllOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllOrder" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getAllOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getOrderByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrderByID" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getOrderByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrderByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getOrderDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrderDetail" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_getOrderDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrderDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_SalesStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalesStatistics" />
+  </wsdl:message>
+  <wsdl:message name="IWCF_Trasua_SalesStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalesStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWCF_Trasua">
+    <wsdl:operation name="AddAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/AddAccount" message="tns:IWCF_Trasua_AddAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/AddAccountResponse" message="tns:IWCF_Trasua_AddAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPasswordAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/EditPasswordAccount" message="tns:IWCF_Trasua_EditPasswordAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/EditPasswordAccountResponse" message="tns:IWCF_Trasua_EditPasswordAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPermissionAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/EditPermissionAccount" message="tns:IWCF_Trasua_EditPermissionAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/EditPermissionAccountResponse" message="tns:IWCF_Trasua_EditPermissionAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/DeleteAccount" message="tns:IWCF_Trasua_DeleteAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/DeleteAccountResponse" message="tns:IWCF_Trasua_DeleteAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditStatusAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/EditStatusAccount" message="tns:IWCF_Trasua_EditStatusAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/EditStatusAccountResponse" message="tns:IWCF_Trasua_EditStatusAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/getAccountID" message="tns:IWCF_Trasua_getAccountID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/getAccountIDResponse" message="tns:IWCF_Trasua_getAccountID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/addBill" message="tns:IWCF_Trasua_addBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/addBillResponse" message="tns:IWCF_Trasua_addBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/editBill" message="tns:IWCF_Trasua_editBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/editBillResponse" message="tns:IWCF_Trasua_editBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addBillDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/addBillDetail" message="tns:IWCF_Trasua_addBillDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/addBillDetailResponse" message="tns:IWCF_Trasua_addBillDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editBillDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/editBillDetail" message="tns:IWCF_Trasua_editBillDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/editBillDetailResponse" message="tns:IWCF_Trasua_editBillDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/addCustomer" message="tns:IWCF_Trasua_addCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/addCustomerResponse" message="tns:IWCF_Trasua_addCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/editCustomer" message="tns:IWCF_Trasua_editCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/editCustomerResponse" message="tns:IWCF_Trasua_editCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="acceptCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/acceptCustomer" message="tns:IWCF_Trasua_acceptCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/acceptCustomerResponse" message="tns:IWCF_Trasua_acceptCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addAccountToCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/addAccountToCustomer" message="tns:IWCF_Trasua_addAccountToCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/addAccountToCustomerResponse" message="tns:IWCF_Trasua_addAccountToCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/getAllCustomer" message="tns:IWCF_Trasua_getAllCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/getAllCustomerResponse" message="tns:IWCF_Trasua_getAllCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/getCustomerByID" message="tns:IWCF_Trasua_getCustomerByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/getCustomerByIDResponse" message="tns:IWCF_Trasua_getCustomerByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllDrink">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/getAllDrink" message="tns:IWCF_Trasua_getAllDrink_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/getAllDrinkResponse" message="tns:IWCF_Trasua_getAllDrink_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDrinkByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/getDrinkByType" message="tns:IWCF_Trasua_getDrinkByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/getDrinkByTypeResponse" message="tns:IWCF_Trasua_getDrinkByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="searchDrink">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/searchDrink" message="tns:IWCF_Trasua_searchDrink_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/searchDrinkResponse" message="tns:IWCF_Trasua_searchDrink_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/getAllType" message="tns:IWCF_Trasua_getAllType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/getAllTypeResponse" message="tns:IWCF_Trasua_getAllType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTypeByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/getTypeByID" message="tns:IWCF_Trasua_getTypeByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/getTypeByIDResponse" message="tns:IWCF_Trasua_getTypeByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDrinkByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/getDrinkByID" message="tns:IWCF_Trasua_getDrinkByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/getDrinkByIDResponse" message="tns:IWCF_Trasua_getDrinkByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewDrink">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/addNewDrink" message="tns:IWCF_Trasua_addNewDrink_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/addNewDrinkResponse" message="tns:IWCF_Trasua_addNewDrink_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewTypeDrink">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/addNewTypeDrink" message="tns:IWCF_Trasua_addNewTypeDrink_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/addNewTypeDrinkResponse" message="tns:IWCF_Trasua_addNewTypeDrink_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editDrink">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/editDrink" message="tns:IWCF_Trasua_editDrink_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/editDrinkResponse" message="tns:IWCF_Trasua_editDrink_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeStatusDrink">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/changeStatusDrink" message="tns:IWCF_Trasua_changeStatusDrink_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/changeStatusDrinkResponse" message="tns:IWCF_Trasua_changeStatusDrink_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editTypeDrink">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/editTypeDrink" message="tns:IWCF_Trasua_editTypeDrink_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/editTypeDrinkResponse" message="tns:IWCF_Trasua_editTypeDrink_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDrink">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/deleteDrink" message="tns:IWCF_Trasua_deleteDrink_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/deleteDrinkResponse" message="tns:IWCF_Trasua_deleteDrink_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteTypeDrink">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/deleteTypeDrink" message="tns:IWCF_Trasua_deleteTypeDrink_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/deleteTypeDrinkResponse" message="tns:IWCF_Trasua_deleteTypeDrink_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/getAllTopping" message="tns:IWCF_Trasua_getAllTopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/getAllToppingResponse" message="tns:IWCF_Trasua_getAllTopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="searchTopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/searchTopping" message="tns:IWCF_Trasua_searchTopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/searchToppingResponse" message="tns:IWCF_Trasua_searchTopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getToppingByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/getToppingByID" message="tns:IWCF_Trasua_getToppingByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/getToppingByIDResponse" message="tns:IWCF_Trasua_getToppingByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewTopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/addNewTopping" message="tns:IWCF_Trasua_addNewTopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/addNewToppingResponse" message="tns:IWCF_Trasua_addNewTopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editTopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/editTopping" message="tns:IWCF_Trasua_editTopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/editToppingResponse" message="tns:IWCF_Trasua_editTopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeStatusTopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/changeStatusTopping" message="tns:IWCF_Trasua_changeStatusTopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/changeStatusToppingResponse" message="tns:IWCF_Trasua_changeStatusTopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteTopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/deleteTopping" message="tns:IWCF_Trasua_deleteTopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/deleteToppingResponse" message="tns:IWCF_Trasua_deleteTopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/addEmployee" message="tns:IWCF_Trasua_addEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/addEmployeeResponse" message="tns:IWCF_Trasua_addEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/editEmployee" message="tns:IWCF_Trasua_editEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/editEmployeeResponse" message="tns:IWCF_Trasua_editEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addAccountToEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/addAccountToEmployee" message="tns:IWCF_Trasua_addAccountToEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/addAccountToEmployeeResponse" message="tns:IWCF_Trasua_addAccountToEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/deleteEmployee" message="tns:IWCF_Trasua_deleteEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/deleteEmployeeResponse" message="tns:IWCF_Trasua_deleteEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="_Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/_Login" message="tns:IWCF_Trasua__Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/_LoginResponse" message="tns:IWCF_Trasua__Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/Logout" message="tns:IWCF_Trasua_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/LogoutResponse" message="tns:IWCF_Trasua_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/addOrder" message="tns:IWCF_Trasua_addOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/addOrderResponse" message="tns:IWCF_Trasua_addOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="acceptOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/acceptOrder" message="tns:IWCF_Trasua_acceptOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/acceptOrderResponse" message="tns:IWCF_Trasua_acceptOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/CancelOrder" message="tns:IWCF_Trasua_CancelOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/CancelOrderResponse" message="tns:IWCF_Trasua_CancelOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addOrderDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/addOrderDetail" message="tns:IWCF_Trasua_addOrderDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/addOrderDetailResponse" message="tns:IWCF_Trasua_addOrderDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editOrderDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/editOrderDetail" message="tns:IWCF_Trasua_editOrderDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/editOrderDetailResponse" message="tns:IWCF_Trasua_editOrderDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/getAllOrder" message="tns:IWCF_Trasua_getAllOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/getAllOrderResponse" message="tns:IWCF_Trasua_getAllOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrderByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/getOrderByID" message="tns:IWCF_Trasua_getOrderByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/getOrderByIDResponse" message="tns:IWCF_Trasua_getOrderByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrderDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/getOrderDetail" message="tns:IWCF_Trasua_getOrderDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/getOrderDetailResponse" message="tns:IWCF_Trasua_getOrderDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCF_Trasua/SalesStatistics" message="tns:IWCF_Trasua_SalesStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCF_Trasua/SalesStatisticsResponse" message="tns:IWCF_Trasua_SalesStatistics_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWCF_Trasua" type="tns:IWCF_Trasua">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddAccount">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/AddAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPasswordAccount">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/EditPasswordAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPermissionAccount">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/EditPermissionAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccount">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/DeleteAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditStatusAccount">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/EditStatusAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountID">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/getAccountID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBill">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/addBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editBill">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/editBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBillDetail">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/addBillDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editBillDetail">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/editBillDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCustomer">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/addCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editCustomer">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/editCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="acceptCustomer">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/acceptCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAccountToCustomer">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/addAccountToCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCustomer">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/getAllCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByID">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/getCustomerByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDrink">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/getAllDrink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDrinkByType">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/getDrinkByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchDrink">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/searchDrink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllType">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/getAllType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTypeByID">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/getTypeByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDrinkByID">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/getDrinkByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewDrink">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/addNewDrink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewTypeDrink">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/addNewTypeDrink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editDrink">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/editDrink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeStatusDrink">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/changeStatusDrink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editTypeDrink">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/editTypeDrink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDrink">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/deleteDrink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteTypeDrink">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/deleteTypeDrink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTopping">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/getAllTopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchTopping">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/searchTopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getToppingByID">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/getToppingByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewTopping">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/addNewTopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editTopping">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/editTopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeStatusTopping">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/changeStatusTopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteTopping">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/deleteTopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addEmployee">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/addEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editEmployee">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/editEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAccountToEmployee">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/addAccountToEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmployee">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/deleteEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_Login">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/_Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addOrder">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/addOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="acceptOrder">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/acceptOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/CancelOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addOrderDetail">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/addOrderDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editOrderDetail">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/editOrderDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllOrder">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/getAllOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderByID">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/getOrderByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderDetail">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/getOrderDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesStatistics">
+      <soap:operation soapAction="http://tempuri.org/IWCF_Trasua/SalesStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WCF_Trasua">
+    <wsdl:port name="BasicHttpBinding_IWCF_Trasua" binding="tns:BasicHttpBinding_IWCF_Trasua">
+      <soap:address location="http://localhost:57428/WCF_Trasua.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

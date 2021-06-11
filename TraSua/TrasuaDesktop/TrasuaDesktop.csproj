@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0467B4A0-7179-4D97-BF24-21B50F10067E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TrasuaDesktop</RootNamespace>
+    <AssemblyName>TrasuaDesktop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddBill.Designer.cs">
+      <DependentUpon>AddBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BillManager.Designer.cs">
+      <DependentUpon>BillManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TrasuaWCFService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\Account.cs" />
+    <Compile Include="EntityModel\Bill.cs" />
+    <Compile Include="EntityModel\BillDetail.cs" />
+    <Compile Include="EntityModel\Customer.cs" />
+    <Compile Include="EntityModel\Drink.cs" />
+    <Compile Include="EntityModel\Employee.cs" />
+    <Compile Include="EntityModel\OrderOnline.cs" />
+    <Compile Include="EntityModel\OrderOnlineDetail.cs" />
+    <Compile Include="EntityModel\Session.cs" />
+    <Compile Include="EntityModel\Topping.cs" />
+    <Compile Include="EntityModel\TypeDrink.cs" />
+    <Compile Include="Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu.designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuItem.Designer.cs">
+      <DependentUpon>MenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineOrder.Designer.cs">
+      <DependentUpon>OnlineOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Process\ImageProcessing.cs" />
+    <Compile Include="Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistic.Designer.cs">
+      <DependentUpon>Statistic.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddBill.resx">
+      <DependentUpon>AddBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillManager.resx">
+      <DependentUpon>BillManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuItem.resx">
+      <DependentUpon>MenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineOrder.resx">
+      <DependentUpon>OnlineOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Statistic.resx">
+      <DependentUpon>Statistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\TrasuaWCFService\WCF_Trasua.wsdl" />
+    <None Include="Connected Services\TrasuaWCFService\WCF_Trasua.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TrasuaWCFService\WCF_Trasua2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-ground-login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-name-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-main2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trà sữa trân châu.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\TrasuaWCFService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TrasuaWCFService\WCF_Trasua.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TrasuaWCFService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TrasuaWCFService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TrasuaWCFService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fast-cart-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-employee-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-takeaway-hot-drink-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sales-performance-100.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

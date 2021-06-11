@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="TrasuaService.WCF_Trasua" CodeBehind="WCF_Trasua.svc.cs" %>
